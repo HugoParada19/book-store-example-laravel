@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Genre extends Model
 {
     use HasFactory;
-	private $timestamps = false;
+	public $timestamps = false;
 
 	public function genering()
 	{

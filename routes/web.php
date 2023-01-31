@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/test', 'test');
+Route::view('/test', 'test', ['done' => false]);
+
+Route::post('/test', [TestingController::class, 'addBook']);
+
+Route::get('/test', [TestingController::class, 'getBooks']);
